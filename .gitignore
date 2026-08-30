@@ -1,0 +1,24 @@
+# Build artifacts
+.build/
+*.xcarchive
+DerivedData/
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+
+# macOS
+.DS_Store
+*.DS_Store
+
+# Firebase — kullanıcıya özel, repoya girmesin
+GoogleService-Info.plist
+
+# CocoaPods (kullanılmıyorsa)
+Pods/
+Podfile.lock
