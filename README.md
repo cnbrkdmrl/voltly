@@ -32,6 +32,16 @@ This repository contains a SwiftUI + Clean Architecture scaffold for Voltly:
 - If you regenerate the project, persist team id with:
   - `DEVELOPMENT_TEAM=YOUR_TEAM_ID ruby scripts/generate_xcodeproj.rb`
 
+## Firebase (Optional)
+
+Analytics and Crashlytics are powered by Firebase, but the config file is not part of this repository because it contains project-specific keys (`GoogleService-Info.plist` is git-ignored).
+
+- **Without it:** the app builds and runs normally. Firebase is simply not configured and analytics/crash reporting stay disabled (`FirebaseBootstrapper.isConfigured` returns `false`).
+- **With your own Firebase project:**
+  1. Create a project in the [Firebase console](https://console.firebase.google.com) and register an iOS app with your bundle identifier.
+  2. Download `GoogleService-Info.plist`.
+  3. Add it to the `VoltlyiOS` target in Xcode (do not commit it).
+
 ## Notes
 
 - `scripts/generate_xcodeproj.rb` regenerates the project from the current source tree.
